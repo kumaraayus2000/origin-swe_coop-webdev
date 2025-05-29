@@ -15,7 +15,7 @@ const interviewQuestions = [
   // trigger re-render
   {
     id: 2,
-    title: "Why so many re-renders?",
+    title: "Loading Expensive Child Component",
     category: "React Basics",
     difficulty: "Medium",
   },

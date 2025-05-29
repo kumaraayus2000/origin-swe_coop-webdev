@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -8,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, CheckCircle, AlertCircle, Clock } from "lucide-react"
 import QuestionOne from "@/components/defects/question-one";
-
+import QuestionTwo from "@/components/defects/question-two";
 // Sample questions data
 const questionsData = {
   1: {
@@ -18,10 +17,10 @@ const questionsData = {
 		component: <QuestionOne />
   },
   2: {
-    title: "Question 2`",
+    title: "Loading Expensive Child Component",
     category: "React",
     difficulty: "Medium",
-    component: <></>
+    component: <QuestionTwo />
   },
   3: {
     title: "Question 3",

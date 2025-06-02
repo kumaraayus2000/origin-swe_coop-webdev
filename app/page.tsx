@@ -19,6 +19,12 @@ const interviewQuestions = [
     category: "React Basics",
     difficulty: "Medium",
   },
+  {
+    id: 3,
+    title: "User email update didn't take effect",
+    category: "React Basics", 
+    difficulty: "Medium",
+  },
 ]
 
 export default function Home() {

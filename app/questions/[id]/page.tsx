@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, CheckCircle, AlertCircle, Clock } from "lucide-react"
 import QuestionOne from "@/components/defects/question-one";
 import QuestionTwo from "@/components/defects/question-two";
+import QuestionThree from "@/components/defects/question-three";
+
 // Sample questions data
 const questionsData = {
   1: {
@@ -23,10 +25,10 @@ const questionsData = {
     component: <QuestionTwo />
   },
   3: {
-    title: "Question 3",
-    category: "CSS",
-    difficulty: "Easy",
-    component: <></>
+    title: "User email update didn't take effect",
+    category: "React",
+    difficulty: "Medium",
+    component: <QuestionThree />
   },
   4: {
     title: "Question 4",

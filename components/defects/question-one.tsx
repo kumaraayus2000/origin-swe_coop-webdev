@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Badge } from '@/components/ui/badge';
 
 export default function QuestionOne() {
@@ -16,7 +16,11 @@ export default function QuestionOne() {
 		renderCount.current += 1;
 	};
 
-	fetchData();
+	useEffect(() =>{
+			fetchData();
+
+	},[]);
+	//fetchData();
 
 	if (renderCount.current > 500) {
 		throw new Error(`Too many renders detected: ${renderCount.current}. Infinite re-render loop prevented. \nNavigate to /components/defects/question-one.tsx to see the defects`);

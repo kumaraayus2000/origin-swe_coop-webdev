@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 export default function QuestionTwo() {
 	const [count, setCount] = useState(0);
-
+    //use memo hooks
 	return (
 		<div className="relative">
 			<h1 className="text-xl mb-4">Loading Expensive Child Component</h1>
@@ -11,6 +11,7 @@ export default function QuestionTwo() {
 			<p>Parent component counter: {count}</p>
 			<Button onClick={() => setCount(count + 1)}>Increment Counter</Button>
 			<HeavyComponent data={{value: "Hello World"}} />
+			
 		</div>
 	);
 }

@@ -9,9 +9,11 @@ import { Label } from "@/components/ui/label"
 
 export default function QuestionThree() {
 	const [user, setUser] = useState({
-		name: "John Doe",
+		//name: "John Doe",
 		email: "john.doe@example.com"
 	})
+	const [newEmail, setNewEmail] = useState(user.email);
+
 
 	const handleUpdateEmail = async () => {
 
@@ -19,9 +21,9 @@ export default function QuestionThree() {
 			// Simulate API call
 			await new Promise((resolve) => setTimeout(resolve, 1000))
 			
-			const newEmail = (document.getElementById("new-email") as HTMLInputElement).value;
+			//const newEmail = (document.getElementById("new-email") as HTMLInputElement).value;
 			user.email = newEmail;
-			setUser(user);
+			setUser({email:newEmail});
 		} catch (err) {
 			console.error(err)
 		}
@@ -49,7 +51,8 @@ export default function QuestionThree() {
 							<Input
 								id="new-email"
 								type="email"
-								defaultValue={user.email}
+								defaultValue={newEmail}
+								onChange={(e)=> setNewEmail(e.target.value)}
 								className="pr-10"
 								placeholder="Enter your new email address"
 							/>

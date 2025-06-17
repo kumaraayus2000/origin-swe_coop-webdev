@@ -20,7 +20,7 @@ export default function QuestionOne() {
 			fetchData();
 
 	},[]);
-	//fetchData();
+	// okfetchData();
 
 	if (renderCount.current > 500) {
 		throw new Error(`Too many renders detected: ${renderCount.current}. Infinite re-render loop prevented. \nNavigate to /components/defects/question-one.tsx to see the defects`);
